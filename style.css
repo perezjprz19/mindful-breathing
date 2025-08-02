@@ -1,0 +1,17 @@
+.circle {
+    background-color: #7abde5;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform 4s ease;
+}
+
+.inhale {
+    transform:scale(2);
+    transition: transform 4s ease;
+}
+
+.exhale {
+    transform: scale(1);
+}
+

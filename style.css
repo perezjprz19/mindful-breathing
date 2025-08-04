@@ -1,8 +1,4 @@
- * {
-    border: solid 1px black;
- }
-
- :root {
+:root {
 
     /* Colors */
     --primaryColor:   #5CC3B9;
@@ -28,14 +24,14 @@ linear-gradient(90deg, rgba(105, 164, 237, 1) 0%, rgba(92, 195, 185, 1) 100%);
     --fontStyleReg: 400;
     --extraLgFont: 3rem;
 
-    /* Spacing & Layout */
-
  }
 
  body {
     font-family: var(--primaryFont);
     color: var(--textColor);
     background-color: var(--backgroundColor);
+    background-image: url(pawel-czerwinski-xwp0_eLoZp0-unsplash.jpg);
+    overflow: hidden;
  }
 
  .main-heading {

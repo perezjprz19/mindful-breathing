@@ -89,7 +89,7 @@ stopButton.addEventListener('click', stopBreathing);
 
 function stopBreathing() {
     startButton.disabled = false;
-    displayCurrentPhase.innerText = '';
+    displayCurrentPhase.innerText = 'Your session has ended.';
     displayCountdown.innerText = '';
     currentPhaseIndex = 0;
     clearTimeout(timeoutId);

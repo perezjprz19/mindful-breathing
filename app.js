@@ -1,9 +1,9 @@
 //Define the breathing cycle phases and duration
 
 let breathingCycle = [
-    { name: 'inhale', duration: 5000, message: 'Breathe in deeply through your nose, feeling your lungs expanding.' },
-    { name: 'hold', duration: 5000, message: 'Pause and feel your body still.' },
-    { name: 'exhale', duration: 5000, message: 'Breathe out through your mouth, letting go of unnecessary tension.'}
+    { phase: 'inhale', duration: 5000, message: 'Breathe in deeply through your nose, feeling your lungs expanding.' },
+    { phase: 'hold', duration: 5000, message: 'Pause and feel your body still.' },
+    { phase: 'exhale', duration: 5000, message: 'Breathe out through your mouth, letting go of unnecessary tension.' }
 ];
 
 let currentPhaseIndex = 0;
@@ -27,7 +27,7 @@ let displayCurrentPhase = document.getElementById('displayCurrentPhase');
 function currentPhase() {
 
     displayCurrentPhase.innerText = breathingCycle[currentPhaseIndex].message;
-    updateCircle(breathingCycle[currentPhaseIndex].name);
+    updateCircle(breathingCycle[currentPhaseIndex].phase);
 
     timeoutId = setTimeout(() => {
         currentPhaseIndex = (currentPhaseIndex + 1) % breathingCycle.length;

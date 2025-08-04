@@ -119,6 +119,11 @@ linear-gradient(90deg, rgba(105, 164, 237, 1) 0%, rgba(92, 195, 185, 1) 100%);
 /* Small Mobile */
 @media screen and (max-width: 480px) {
 
+    .main-heading {
+     font-size: var(--largeFont);
+    font-weight: var(--fontStyleBold);
+ }
+
     .circle {
         width: 175px;
         height: 175px;

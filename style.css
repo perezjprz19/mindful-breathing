@@ -31,7 +31,8 @@ linear-gradient(90deg, rgba(105, 164, 237, 1) 0%, rgba(92, 195, 185, 1) 100%);
     color: var(--textColor);
     background-color: var(--backgroundColor);
     background-image: url(pawel-czerwinski-xwp0_eLoZp0-unsplash-min.jpg);
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
  }
 
  .main-heading {
@@ -119,10 +120,19 @@ linear-gradient(90deg, rgba(105, 164, 237, 1) 0%, rgba(92, 195, 185, 1) 100%);
 /* Small Mobile */
 @media screen and (max-width: 480px) {
 
+ main {
+    justify-content: flex-start;
+    margin-top: 6rem;
+}
+    
     .main-heading {
      font-size: var(--largeFont);
-    font-weight: var(--fontStyleBold);
+     font-weight: var(--fontStyleBold);
  }
+
+ .breathingCycle {
+    margin-top: 6rem;
+}
 
     .circle {
         width: 175px;

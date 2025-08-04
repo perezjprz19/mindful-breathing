@@ -1,9 +1,114 @@
+ * {
+    border: solid 1px black;
+ }
+
+ :root {
+
+    /* Colors */
+    --primaryColor:   #5CC3B9;
+    --accentColor: #69a4ed;
+    --backgroundColor: #f0fdfa;
+    --textColor: #333333;
+    --blueTealGradient:
+linear-gradient(90deg, rgba(105, 164, 237, 1) 0%, rgba(92, 195, 185, 1) 100%);
+
+    /*Typography
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/  
+    --primaryFont: 'Montserrat', sans-serif;
+    --largeFont: 2rem;
+    --fontStyleBold: 700;
+    --fontStyleSemi: 600;
+    --smallFont: 1rem;
+    --fontStyleReg: 400;
+    --extraLgFont: 3rem;
+
+    /* Spacing & Layout */
+
+ }
+
+ body {
+    font-family: var(--primaryFont);
+    color: var(--textColor);
+    background-color: var(--backgroundColor);
+ }
+
+ .main-heading {
+    text-align: center;
+     font-size: var(--extraLgFont);
+    font-weight: var(--fontStyleBold);
+ }
+
+ main {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+
+ }
+
+.breathingCycle {
+    margin-top: 10rem;
+}
+
+ #displayCurrentPhase {
+    font-weight: var(--fontStyleReg);
+    font-style: italic;
+    font-optical-sizing:auto;
+    font-size: var(--largeFont);
+    text-align: center;
+ }
+
+ .buttonContainer {
+    display: flex;
+    justify-content: center;
+ }
+
+ #startButton, #stopButton {
+    font-size: var(--smallFont);
+    font-weight: var(--fontStyleSemibold);
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    background: var(--blueTealGradient); 
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    margin: 0.5rem;
+    border:  2px solid black;
+
+&:hover {
+   transform: scale(1.05);
+}
+
+&:active {
+    transform: translate(0,0.25em);
+}
+
+ }
+
+
 .circle {
-    background-color: #7abde5;
-    width: 100px;
-    height: 100px;
+    display: flex;
+    background-color: var(--accentColor);
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     transition: transform 4s ease;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.circle > p {
+    font-size: var(--extraLgFont);
+    text-align: center;
+    
 }
 
 .inhale {
@@ -15,3 +120,38 @@
     transform: scale(1);
 }
 
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+
+    .circle {
+        width: 175px;
+        height: 175px;
+    }
+
+    .circle > p {
+    font-size: var(--largeFont); 
+}
+
+.inhale {
+    transform:scale(1.5);
+    
+}
+
+#displayCurrentPhase {
+    font-size: var(--smallFont);
+ }
+
+ #startButton, #stopButton {
+    padding: 1rem 0.5rem;
+ }
+}
+
+/* Medium Mobile */
+
+@media screen and (min-width: 481px) {
+
+ .inhale {
+    transform:scale(1.5);
+}
+
+}

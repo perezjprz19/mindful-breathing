@@ -1,9 +1,9 @@
 //Define the breathing cycle phases and duration
 
 let breathingCycle = [
-    { name: 'inhale', duration: 4000 },
-    { name: 'hold', duration: 4000 },
-    { name: 'exhale', duration: 4000, }
+    { name: 'inhale', duration: 5000, message: 'Breathe in deeply through your nose, feeling your lungs expanding.' },
+    { name: 'hold', duration: 5000, message: 'Pause and feel your body still.' },
+    { name: 'exhale', duration: 5000, message: 'Breathe out through your mouth, letting go of unnecessary tension.'}
 ];
 
 let currentPhaseIndex = 0;
@@ -26,7 +26,7 @@ let displayCurrentPhase = document.getElementById('displayCurrentPhase');
 
 function currentPhase() {
 
-    displayCurrentPhase.innerText = breathingCycle[currentPhaseIndex].name;
+    displayCurrentPhase.innerText = breathingCycle[currentPhaseIndex].message;
     updateCircle(breathingCycle[currentPhaseIndex].name);
 
     timeoutId = setTimeout(() => {
@@ -90,11 +90,13 @@ stopButton.addEventListener('click', stopBreathing);
 function stopBreathing() {
     startButton.disabled = false;
     displayCurrentPhase.innerText = '';
+    displayCountdown.innerText = '';
     currentPhaseIndex = 0;
     clearTimeout(timeoutId);
     clearInterval(intervalId);
+    intervalId = null;
     circle.classList.remove('exhale');
     circle.classList.remove('inhale');
-    console.log("You've stopped the breathing exercise!");
+    console.log("You've stopped the breathing exercise!", intervalId);
 };
 

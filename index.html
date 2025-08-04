@@ -6,13 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
+    <!--Font Link-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
     <title>Mindful Breathing</title>
 </head>
 
 <body>
+    <h1 class="main-heading">Mindful Breathing</h1>
     <main>
-
-        <h1>Mindful Breathing</h1>
 
         <div class="circle ">
             <p id="displayCountdown"></p>
@@ -21,8 +27,13 @@
         <div class="breathingCycle">
             <p id="displayCurrentPhase"></p>
 
-            <button id="startButton">Start</button>
-            <button id="stopButton">Stop</button>
+            <div class="buttonContainer">
+
+                <button id="startButton">Start session</button>
+                <button id="stopButton">Stop session </button>
+
+            </div>
+
         </div>
 
 

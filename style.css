@@ -31,14 +31,14 @@ linear-gradient(90deg, rgba(105, 164, 237, 1) 0%, rgba(92, 195, 185, 1) 100%);
     color: var(--textColor);
     background-color: var(--backgroundColor);
     background-image: url(pawel-czerwinski-xwp0_eLoZp0-unsplash-min.jpg);
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
  }
 
  .main-heading {
     text-align: center;
      font-size: var(--extraLgFont);
     font-weight: var(--fontStyleBold);
+    margin-top: 4rem;
  }
 
  main {
@@ -65,19 +65,24 @@ linear-gradient(90deg, rgba(105, 164, 237, 1) 0%, rgba(92, 195, 185, 1) 100%);
  .buttonContainer {
     display: flex;
     justify-content: center;
+    gap: 1rem;
  }
 
  #startButton, #stopButton {
     font-size: var(--smallFont);
     font-weight: var(--fontStyleSemibold);
-    padding: 1rem 3rem;
     text-transform: uppercase;
+    padding: 1rem 2rem;
     background: var(--blueTealGradient); 
     border-radius: 20px;
     cursor: pointer;
     color: white;
     margin: 0.5rem;
     border:  2px solid black;
+    box-sizing: border-box;
+    flex-basis: max-content;
+    max-width: 13rem;
+
 
 &:hover {
    transform: scale(1.05);

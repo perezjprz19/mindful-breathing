@@ -60,6 +60,7 @@ linear-gradient(90deg, rgba(105, 164, 237, 1) 0%, rgba(92, 195, 185, 1) 100%);
     font-optical-sizing:auto;
     font-size: var(--largeFont);
     text-align: center;
+    height: 2rem;
  }
 
  .buttonContainer {
@@ -68,7 +69,7 @@ linear-gradient(90deg, rgba(105, 164, 237, 1) 0%, rgba(92, 195, 185, 1) 100%);
     gap: 1rem;
  }
 
- #startButton, #stopButton {
+ #toggleSession {
     font-size: var(--smallFont);
     font-weight: var(--fontStyleSemibold);
     text-transform: uppercase;
@@ -94,6 +95,9 @@ linear-gradient(90deg, rgba(105, 164, 237, 1) 0%, rgba(92, 195, 185, 1) 100%);
 
  }
 
+ .hidden {
+    display: none;
+ }
 
 .circle {
     display: flex;
@@ -157,7 +161,7 @@ linear-gradient(90deg, rgba(105, 164, 237, 1) 0%, rgba(92, 195, 185, 1) 100%);
     font-size: var(--smallFont);
  }
 
- #startButton, #stopButton {
+ #toggleSession {
     padding: 1rem 0.5rem;
  }
 }

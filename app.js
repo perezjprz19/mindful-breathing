@@ -9,18 +9,32 @@ let breathingCycle = [
 let currentPhaseIndex = 0;
 let timeoutId;
 
-let startButton = document.getElementById('startButton');
+let isRunning = false;
 
+let toggleSessionBtn = document.getElementById('toggleSession');
+
+function toggleSession() {
+    if (isRunning === false) {
+        toggleSessionBtn.innerText = 'Stop Session';
+        startBreathing();
+        isRunning = true;
+
+
+    } else {
+        toggleSessionBtn.innerText = 'Start Session';
+        stopBreathing();
+        isRunning = false;
+    }
+}
 
 function startBreathing() {
     clearTimeout(timeoutId); // stop any old loop
     currentPhaseIndex = 0; // reset to Inhale
-    startButton.disabled = true;
     currentPhase();
     console.log("You've started the breathing exercise!");
 };
 
-startButton.addEventListener('click', startBreathing);
+toggleSessionBtn.addEventListener('click', toggleSession);
 
 let displayCurrentPhase = document.getElementById('displayCurrentPhase');
 
@@ -83,12 +97,7 @@ function updateCircle(currentPhase) {
 
 //Stop button logic to stop the breathing exercise
 
-let stopButton = document.getElementById('stopButton');
-
-stopButton.addEventListener('click', stopBreathing);
-
 function stopBreathing() {
-    startButton.disabled = false;
     displayCurrentPhase.innerText = 'Your session has ended.';
     displayCountdown.innerText = '';
     currentPhaseIndex = 0;
